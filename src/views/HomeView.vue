@@ -1,15 +1,17 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import Navigation from '@/components/Navigation.vue';
+</script>
 
 <template>
   <section>
-    <div>nav</div>
     <div>
+      <Navigation />
       <h1>
         Мы делаем интерьер <br />
         Современным и Мималистичным
       </h1>
       <p>Дизайн интерьера</p>
-      <button>Проекты</button>
+      <el-button plain>Проекты</el-button>
     </div>
   </section>
 </template>
