@@ -1,12 +1,3 @@
-<script setup lang="ts">
-import { ref } from 'vue';
-// import type { TabsPaneContext } from 'element-plus';
-
-const activeTab = ref('home');
-
-// const handleClick = (tab: TabsPaneContext, event: Event) => {};
-</script>
-
 <template>
   <nav class="navigation">
     <RouterLink class="navigation__logo" to="/">LOGO</RouterLink>
@@ -32,9 +23,7 @@ const activeTab = ref('home');
 .navigation {
   display: flex;
   align-items: center;
-
-  &__logo {
-  }
+  margin-top: 30px;
 
   &__list {
     display: flex;

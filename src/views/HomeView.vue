@@ -1,31 +1,50 @@
 <script setup lang="ts">
-import Navigation from '@/components/Navigation.vue';
+import BaseContainer from '@/components/BaseContainer.vue';
+import BaseNavigation from '@/components/BaseNavigation.vue';
 </script>
 
 <template>
-  <section class="homeview">
-    <div>
-      <Navigation />
-      <h1>
-        Мы делаем интерьер <br />
-        Современным и Мималистичным
-      </h1>
-      <p>Дизайн интерьера</p>
-      <div class="homeview__links">
-        <RouterLink class="homeview__link" to="/contacts">
-          <el-button type="primary">Заказать</el-button>
-        </RouterLink>
-        <RouterLink class="homeview__link" to="/projects">
-          <el-button plain>Проекты</el-button>
-        </RouterLink>
+  <BaseContainer tag="section">
+    <BaseNavigation />
+    <header class="homeview">
+      <img
+        class="homeview__img"
+        src="@/assets/img/home-background.jpg"
+        alt="Фон"
+      />
+      <div class="homeview__container">
+        <h1 class="homeview__title">
+          Мы делаем интерьер <br />
+          Современным и Мималистичным
+        </h1>
+        <p>Дизайн интерьера</p>
+        <div class="homeview__links">
+          <RouterLink class="homeview__link" to="/contacts">
+            <el-button type="primary">Заказать</el-button>
+          </RouterLink>
+          <RouterLink class="homeview__link" to="/projects">
+            <el-button plain>Проекты</el-button>
+          </RouterLink>
+        </div>
       </div>
-    </div>
-    <img class="homeview__img" src="@/assets/img/homeview-bg.jpg" alt="bg" />
-  </section>
+    </header>
+  </BaseContainer>
 </template>
 
 <style lang="scss">
 .homeview {
+  position: relative;
+
+  &__container {
+    position: relative;
+    top: 200px;
+    left: 115px;
+  }
+
+  &__title {
+    font-size: 30px;
+  }
+
   &__links {
     margin-top: 30px;
   }
@@ -37,8 +56,10 @@ import Navigation from '@/components/Navigation.vue';
 
   &__img {
     position: absolute;
-    width: 400px;
-    height: 600px;
+    top: 0;
+    left: 50%;
+    width: 500px;
+    height: 750px;
   }
 }
 </style>

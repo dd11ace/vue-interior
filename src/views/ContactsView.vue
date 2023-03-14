@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import Navigation from '@/components/Navigation.vue';
+import BaseNavigation from '@/components/BaseNavigation.vue';
 </script>
 
 <template>
-  <Navigation />
+  <BaseNavigation />
   <div>Контакты</div>
 </template>
 
