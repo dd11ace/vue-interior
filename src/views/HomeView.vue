@@ -4,28 +4,22 @@ import BaseNavigation from '@/components/BaseNavigation.vue';
 </script>
 
 <template>
-  <BaseContainer tag="section">
+  <BaseContainer class="homeview" tag="section">
     <BaseNavigation />
-    <header class="homeview">
-      <img
-        class="homeview__img"
-        src="@/assets/img/home-background.jpg"
-        alt="Фон"
-      />
-      <div class="homeview__container">
-        <h1 class="homeview__title">
-          Мы делаем интерьер <br />
-          Современным и Мималистичным
-        </h1>
-        <p>Дизайн интерьера</p>
-        <div class="homeview__links">
-          <RouterLink class="homeview__link" to="/contacts">
-            <el-button type="primary">Заказать</el-button>
-          </RouterLink>
-          <RouterLink class="homeview__link" to="/projects">
-            <el-button plain>Проекты</el-button>
-          </RouterLink>
-        </div>
+    <div class="homeview__bg-img"></div>
+    <header class="homeview__header">
+      <h1 class="homeview__title">
+        Мы делаем интерьер <br />
+        Современным и Мималистичным
+      </h1>
+      <p>Дизайн интерьера</p>
+      <div class="homeview__links">
+        <RouterLink class="homeview__link" to="/contacts">
+          <el-button type="primary">Заказать</el-button>
+        </RouterLink>
+        <RouterLink class="homeview__link" to="/projects">
+          <el-button plain>Проекты</el-button>
+        </RouterLink>
       </div>
     </header>
   </BaseContainer>
@@ -35,10 +29,9 @@ import BaseNavigation from '@/components/BaseNavigation.vue';
 .homeview {
   position: relative;
 
-  &__container {
-    position: relative;
-    top: 200px;
-    left: 115px;
+  &__header {
+    margin-top: 250px;
+    margin-left: 120px;
   }
 
   &__title {
@@ -54,12 +47,16 @@ import BaseNavigation from '@/components/BaseNavigation.vue';
     margin-right: 20px;
   }
 
-  &__img {
+  &__bg-img {
+    display: block;
+    width: 520px;
+    height: 780px;
     position: absolute;
-    top: 0;
-    left: 50%;
-    width: 500px;
-    height: 750px;
+    top: 90px;
+    right: 60px;
+    background-image: url(@/assets/img/home-background.jpg);
+    background-repeat: no-repeat;
+    background-size: 520px 780px;
   }
 }
 </style>
