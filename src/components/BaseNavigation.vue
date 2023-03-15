@@ -1,22 +1,33 @@
+<script setup lang="ts">
+import BaseContainer from './BaseContainer.vue';
+</script>
+
 <template>
-  <nav class="navigation">
-    <RouterLink class="navigation__logo" to="/">LOGO</RouterLink>
-    <ul class="navigation__list">
-      <li class="navigation__list-item">
-        <RouterLink class="navigation__list-link" to="/">Главная</RouterLink>
-      </li>
-      <li class="navigation__list-item">
-        <RouterLink class="navigation__list-link" to="/projects"
-          >Проекты</RouterLink
-        >
-      </li>
-      <li class="navigation__list-item">
-        <RouterLink class="navigation__list-link" to="/contacts"
-          >Контакты</RouterLink
-        >
-      </li>
-    </ul>
-  </nav>
+  <BaseContainer>
+    <nav class="navigation">
+      <RouterLink class="navigation__logo" to="/">LOGO</RouterLink>
+      <ul class="navigation__list">
+        <li class="navigation__list-item">
+          <RouterLink class="navigation__list-link" to="/">Главная</RouterLink>
+        </li>
+        <li class="navigation__list-item">
+          <RouterLink class="navigation__list-link" to="/projects"
+            >Проекты</RouterLink
+          >
+        </li>
+        <li class="navigation__list-item">
+          <RouterLink class="navigation__list-link" to="/contacts"
+            >Контакты</RouterLink
+          >
+        </li>
+      </ul>
+      <RouterLink class="navigation__list-link" to="/">
+        <el-button class="navigation__buy-btn" type="primary">
+          Заказать
+        </el-button>
+      </RouterLink>
+    </nav>
+  </BaseContainer>
 </template>
 
 <style lang="scss">
@@ -32,18 +43,23 @@
     margin: 0 auto;
     padding-left: 0;
     text-transform: uppercase;
+  }
 
-    &-item {
-      padding: 20px;
-    }
+  &__list-item {
+    padding: 20px;
+  }
 
-    &-link {
-      text-decoration: none;
-      color: #000;
-    }
+  &__list-link {
+    text-decoration: none;
+    color: var(--el-text-color-primary);
+  }
+
+  &__buy-btn {
+    border-radius: 20px;
+    text-transform: uppercase;
   }
 }
 .active-link {
-  color: var(--main-color);
+  color: var(--el-color-primary);
 }
 </style>

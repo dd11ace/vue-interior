@@ -1,7 +1,5 @@
 <script setup lang="ts">
-defineProps<{
-  tag?: string;
-}>();
+defineProps(['tag']);
 </script>
 
 <template>

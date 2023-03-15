@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import BaseContainer from '@/components/BaseContainer.vue';
 import BaseNavigation from '@/components/BaseNavigation.vue';
+import BaseContainer from '@/components/BaseContainer.vue';
 </script>
 
 <template>
-  <BaseContainer class="homeview" tag="section">
-    <BaseNavigation />
+  <BaseNavigation />
+  <BaseContainer class="homeview" tag="header">
     <div class="homeview__bg-img"></div>
-    <header class="homeview__header">
+    <section class="homeview__container">
       <h1 class="homeview__title">
         Мы делаем интерьер <br />
         Современным и Мималистичным
@@ -15,13 +15,15 @@ import BaseNavigation from '@/components/BaseNavigation.vue';
       <p>Дизайн интерьера</p>
       <div class="homeview__links">
         <RouterLink class="homeview__link" to="/contacts">
-          <el-button type="primary">Заказать</el-button>
+          <el-button class="homeview__link-btn" type="primary"
+            >Заказать</el-button
+          >
         </RouterLink>
         <RouterLink class="homeview__link" to="/projects">
-          <el-button plain>Проекты</el-button>
+          <el-button class="homeview__link-btn" plain>Проекты</el-button>
         </RouterLink>
       </div>
-    </header>
+    </section>
   </BaseContainer>
 </template>
 
@@ -29,9 +31,9 @@ import BaseNavigation from '@/components/BaseNavigation.vue';
 .homeview {
   position: relative;
 
-  &__header {
+  &__container {
     margin-top: 250px;
-    margin-left: 120px;
+    margin-left: 100px;
   }
 
   &__title {
@@ -45,6 +47,10 @@ import BaseNavigation from '@/components/BaseNavigation.vue';
   &__link {
     text-decoration: none;
     margin-right: 20px;
+
+    &-btn {
+      text-transform: uppercase;
+    }
   }
 
   &__bg-img {
@@ -52,8 +58,8 @@ import BaseNavigation from '@/components/BaseNavigation.vue';
     width: 520px;
     height: 780px;
     position: absolute;
-    top: 90px;
-    right: 60px;
+    top: -220px;
+    right: 70px;
     background-image: url(@/assets/img/home-background.jpg);
     background-repeat: no-repeat;
     background-size: 520px 780px;
