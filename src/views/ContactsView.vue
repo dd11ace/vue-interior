@@ -1,10 +1,23 @@
 <script setup lang="ts">
 import BaseNavigation from '@/components/BaseNavigation.vue';
+import BaseContainer from '@/components/BaseContainer.vue';
+import BaseFooterVue from '@/components/BaseFooter.vue';
 </script>
 
 <template>
   <BaseNavigation />
-  <div>Контакты</div>
+  <BaseContainer class="contactsview">
+    <h2>Контакты</h2>
+    <p>Адрес:</p>
+    <p>г. Иркутск, ул. Лапина 44</p>
+    <p>Телефон:</p>
+    <p>8 800 000 00 00</p>
+  </BaseContainer>
+  <BaseFooterVue />
 </template>
 
-<style lang="scss"></style>
+<style lang="scss">
+.contactsview {
+  position: relative;
+}
+</style>

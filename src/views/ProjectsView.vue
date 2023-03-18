@@ -1,8 +1,9 @@
 <script setup lang="ts">
 import BaseContainer from '@/components/BaseContainer.vue';
+import BaseFooter from '@/components/BaseFooter.vue';
 import BaseNavigation from '@/components/BaseNavigation.vue';
 
-const projects = [
+const images = [
   {
     id: '1',
     img_url: 'src/assets/img/projects_imgs/1.jpg',
@@ -47,40 +48,31 @@ const projects = [
 </script>
 
 <template>
-  <BaseNavigation />
-  <BaseContainer class="projectsview">
-    <h2 class="projectsview__title">Наши проекты</h2>
-    <section>
-      <ul class="projectsview__list">
-        <li
-          class="projectsview__list-item"
-          v-for="project in projects"
-          :key="project.id"
-        >
-          <el-image
-            class="projectsview__img"
-            :src="project.img_url"
-            :alt="project.id"
-            :zoom-rate="1.2"
-            fit="cover"
-          />
-        </li>
-      </ul>
-    </section>
-  </BaseContainer>
+  <section class="projectview">
+    <BaseNavigation />
+    <BaseContainer>
+      <h2 class="projectsview__title">Наши проекты</h2>
+      <div class="projectsview__images-container">
+        <el-image
+          class="projectsview__images"
+          v-for="image in images"
+          :key="image.id"
+          :src="image.img_url"
+        />
+      </div>
+    </BaseContainer>
+    <BaseFooter />
+  </section>
 </template>
 
 <style lang="scss">
 .projectsview {
-  &__list {
-    display: flex;
-    // flex-wrap: wrap;
-    list-style: none;
-  }
+  position: relative;
 
-  &__list-item {
-    width: 500px;
-    height: inherit;
+  &__images {
+    width: 40%;
+    min-height: 200px;
+    margin-bottom: 10px;
   }
 }
 </style>

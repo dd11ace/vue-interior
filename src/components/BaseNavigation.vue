@@ -1,35 +1,41 @@
 <script setup lang="ts">
 import BaseContainer from './BaseContainer.vue';
+
+const links = [
+  {
+    name: 'Главная',
+    url: '/',
+    id: '1',
+  },
+  {
+    name: 'Проекты',
+    url: '/projects',
+    id: '2',
+  },
+  {
+    name: 'Контакты',
+    url: '/contacts',
+    id: '3',
+  },
+];
 </script>
 
 <template>
   <BaseContainer>
     <nav class="navigation">
       <RouterLink class="navigation__logo" to="/">LOGO</RouterLink>
+
       <ul class="navigation__list">
-        <li class="navigation__list-item">
+        <li class="navigation__list-item" v-for="link in links" :key="link.id">
           <el-link>
-            <RouterLink class="navigation__list-link" to="/"
-              >Главная</RouterLink
-            >
-          </el-link>
-        </li>
-        <li class="navigation__list-item">
-          <el-link>
-            <RouterLink class="navigation__list-link" to="/projects">
-              Проекты
-            </RouterLink>
-          </el-link>
-        </li>
-        <li class="navigation__list-item">
-          <el-link>
-            <RouterLink class="navigation__list-link" to="/contacts"
-              >Контакты
+            <RouterLink class="navigation__list-link" :to="link.url">
+              {{ link.name }}
             </RouterLink>
           </el-link>
         </li>
       </ul>
-      <RouterLink class="navigation__list-link" to="/">
+
+      <RouterLink class="navigation__list-link" to="/contacts">
         <el-button class="navigation__buy-btn" type="primary">
           Заказать
         </el-button>

@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import BaseNavigation from '@/components/BaseNavigation.vue';
 import BaseContainer from '@/components/BaseContainer.vue';
+import BaseFooterVue from '@/components/BaseFooter.vue';
 </script>
 
 <template>
@@ -25,10 +26,12 @@ import BaseContainer from '@/components/BaseContainer.vue';
       </div>
     </section>
   </BaseContainer>
+  <BaseFooterVue />
 </template>
 
 <style lang="scss">
 .homeview {
+  display: flex;
   position: relative;
 
   &__container {
@@ -58,7 +61,7 @@ import BaseContainer from '@/components/BaseContainer.vue';
     width: 520px;
     height: 780px;
     position: absolute;
-    top: -220px;
+    top: 20px;
     right: 70px;
     background-image: url(@/assets/img/home-background.jpg);
     background-repeat: no-repeat;
