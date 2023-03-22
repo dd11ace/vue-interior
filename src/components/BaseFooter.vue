@@ -21,7 +21,6 @@ import BaseContainer from './BaseContainer.vue';
 .basefooter {
   position: absolute;
   bottom: 0;
-  margin-top: auto;
   width: 100%;
   min-height: 2.5rem;
   color: var(--el-color-info-light-9);

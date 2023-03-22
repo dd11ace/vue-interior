@@ -8,16 +8,12 @@ import BaseFooterVue from '@/components/BaseFooter.vue';
   <BaseNavigation />
   <BaseContainer class="contactsview">
     <h2>Контакты</h2>
-    <p>Адрес:</p>
+    <b>Адрес:</b>
     <p>г. Иркутск, ул. Лапина 44</p>
-    <p>Телефон:</p>
+    <b>Телефон:</b>
     <p>8 800 000 00 00</p>
   </BaseContainer>
   <BaseFooterVue />
 </template>
 
-<style lang="scss">
-.contactsview {
-  position: relative;
-}
-</style>
+<style lang="scss"></style>

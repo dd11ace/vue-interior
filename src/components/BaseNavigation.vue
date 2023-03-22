@@ -5,17 +5,22 @@ const links = [
   {
     name: 'Главная',
     url: '/',
-    id: '1',
+    id: 'main',
   },
   {
     name: 'Проекты',
     url: '/projects',
-    id: '2',
+    id: 'projects',
+  },
+  {
+    name: 'Отзывы',
+    url: '/testimonials',
+    id: 'testimonials',
   },
   {
     name: 'Контакты',
     url: '/contacts',
-    id: '3',
+    id: 'contacts',
   },
 ];
 </script>

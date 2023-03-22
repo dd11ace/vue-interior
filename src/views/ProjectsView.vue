@@ -3,7 +3,7 @@ import BaseContainer from '@/components/BaseContainer.vue';
 import BaseFooter from '@/components/BaseFooter.vue';
 import BaseNavigation from '@/components/BaseNavigation.vue';
 
-const images = [
+let images = [
   {
     id: '1',
     img_url: 'src/assets/img/projects_imgs/1.jpg',
@@ -42,7 +42,7 @@ const images = [
   },
   {
     id: '10',
-    img_url: 'src/assets/img/projects_imgs/1.jpg',
+    img_url: 'src/assets/img/projects_imgs/10.jpg',
   },
 ];
 </script>
