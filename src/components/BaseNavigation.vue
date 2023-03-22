@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 import BaseContainer from './BaseContainer.vue';
 
 const links = [

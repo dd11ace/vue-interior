@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 import BaseContainer from '@/components/BaseContainer.vue';
 import BaseFooter from '@/components/BaseFooter.vue';
 import BaseNavigation from '@/components/BaseNavigation.vue';

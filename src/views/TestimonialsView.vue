@@ -1,7 +1,8 @@
-<script setup lang="ts">
+<script setup>
 import BaseContainer from '@/components/BaseContainer.vue';
 import BaseCard from '@/components/BaseCard.vue';
 import BaseNavigation from '@/components/BaseNavigation.vue';
+import BaseFooter from '@/components/BaseFooter.vue';
 
 let testimonials = [
   {
@@ -42,22 +43,30 @@ let testimonials = [
         v-for="testimonial in testimonials"
         :key="testimonial.id"
       >
-        <b class="testimonialsview__title">{{ testimonial.name }}</b>
-        <p>{{ testimonial.text }}</p>
+        <b class="testimonialsview__title">
+          {{ testimonial.name }}
+        </b>
+        <p class="testimonialsview__text">
+          {{ testimonial.text }}
+        </p>
       </BaseCard>
     </div>
   </BaseContainer>
+  <BaseFooter />
 </template>
 
 <style lang="scss">
 .testimonialsview {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
 
   &__card {
-    width: 550px;
-    margin-bottom: 20px;
+    width: 540px;
+  }
+
+  &__text {
+    text-align: center;
   }
 }
 </style>
