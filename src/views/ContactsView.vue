@@ -1,21 +1,38 @@
 <script setup>
 import BaseNavigation from '@/components/BaseNavigation.vue';
 import BaseContainer from '@/components/BaseContainer.vue';
-import BaseFooterVue from '@/components/BaseFooter.vue';
+import BaseFooter from '@/components/BaseFooter.vue';
+import Map from '@/components/Map.vue';
 </script>
 
 <template>
   <BaseNavigation />
-  <BaseContainer class="contactsview" tag="section">
+  <BaseContainer tag="section">
     <h2>Контакты</h2>
-    <div class="contactsview__container">
-      <b>Адрес:</b>
-      <p>г. Иркутск, ул. Лапина 44</p>
-      <b>Телефон:</b>
-      <p>8 800 000 00 00</p>
+    <div class="contactsview">
+      <div class="contactsview__info">
+        <b>Адрес:</b>
+        <p>г. Иркутск, ул. Лапина 44</p>
+        <b>Телефон:</b>
+        <p>8 800 000 00 00</p>
+      </div>
+      <div>
+        <Map />
+      </div>
     </div>
   </BaseContainer>
-  <BaseFooterVue />
+  <BaseFooter />
 </template>
 
-<style lang="scss"></style>
+<style lang="scss">
+.contactsview {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 90px;
+
+  &__info {
+    position: relative;
+    top: 160px;
+  }
+}
+</style>

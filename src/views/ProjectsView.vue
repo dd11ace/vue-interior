@@ -51,7 +51,7 @@ let images = [
   <BaseNavigation />
   <section class="projectsview">
     <BaseContainer>
-      <h2 class="projectsview__title">Наши проекты</h2>
+      <h2>Наши проекты</h2>
       <div class="projectsview__images-container">
         <ul class="projectsview__images-list">
           <li

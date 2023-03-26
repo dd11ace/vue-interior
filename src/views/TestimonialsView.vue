@@ -36,7 +36,7 @@ let testimonials = [
 <template>
   <BaseNavigation />
   <BaseContainer tag="section">
-    <h2>Отзывы</h2>
+    <h2>Отзывы наших клиентов</h2>
     <div class="testimonialsview">
       <BaseCard
         class="testimonialsview__card"
