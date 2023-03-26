@@ -6,7 +6,7 @@ import BaseFooterVue from '@/components/BaseFooter.vue';
 
 <template>
   <BaseNavigation />
-  <BaseContainer class="contactsview">
+  <BaseContainer class="contactsview" tag="section">
     <h2>Контакты</h2>
     <b>Адрес:</b>
     <p>г. Иркутск, ул. Лапина 44</p>

@@ -48,21 +48,19 @@ let images = [
 </script>
 
 <template>
-  <section class="projectview">
-    <BaseNavigation />
-    <BaseContainer>
-      <h2 class="projectsview__title">Наши проекты</h2>
-      <div class="projectsview__images-container">
-        <el-image
-          class="projectsview__images"
-          v-for="image in images"
-          :key="image.id"
-          :src="image.img_url"
-        />
-      </div>
-    </BaseContainer>
-    <BaseFooter />
-  </section>
+  <BaseNavigation />
+  <BaseContainer class="projectview" tag="section">
+    <h2 class="projectsview__title">Наши проекты</h2>
+    <div class="projectsview__images-container">
+      <el-image
+        class="projectsview__images"
+        v-for="image in images"
+        :key="image.id"
+        :src="image.img_url"
+      />
+    </div>
+  </BaseContainer>
+  <BaseFooter />
 </template>
 
 <style lang="scss">

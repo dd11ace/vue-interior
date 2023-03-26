@@ -1,5 +1,7 @@
 <script setup>
-defineProps(['tag']);
+defineProps({
+  tag: String,
+});
 </script>
 
 <template>

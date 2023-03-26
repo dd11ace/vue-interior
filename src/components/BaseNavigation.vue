@@ -26,26 +26,24 @@ const links = [
 </script>
 
 <template>
-  <BaseContainer>
-    <nav class="navigation">
-      <RouterLink class="navigation__logo" to="/">LOGO</RouterLink>
+  <BaseContainer class="navigation" tag="nav">
+    <RouterLink class="navigation__logo" to="/">LOGO</RouterLink>
 
-      <ul class="navigation__list">
-        <li class="navigation__list-item" v-for="link in links" :key="link.id">
-          <el-link>
-            <RouterLink class="navigation__list-link" :to="link.url">
-              {{ link.name }}
-            </RouterLink>
-          </el-link>
-        </li>
-      </ul>
+    <ul class="navigation__list">
+      <li class="navigation__list-item" v-for="link in links" :key="link.id">
+        <el-link>
+          <RouterLink class="navigation__list-link" :to="link.url">
+            {{ link.name }}
+          </RouterLink>
+        </el-link>
+      </li>
+    </ul>
 
-      <RouterLink class="navigation__list-link" to="/contacts">
-        <el-button class="navigation__buy-btn" type="primary">
-          Заказать
-        </el-button>
-      </RouterLink>
-    </nav>
+    <RouterLink class="navigation__list-link" to="/contacts">
+      <el-button class="navigation__buy-btn" type="primary">
+        Заказать
+      </el-button>
+    </RouterLink>
   </BaseContainer>
 </template>
 

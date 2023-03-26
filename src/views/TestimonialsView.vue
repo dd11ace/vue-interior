@@ -67,6 +67,7 @@ let testimonials = [
 
   &__text {
     text-align: center;
+    line-height: 1.5em;
   }
 }
 </style>
