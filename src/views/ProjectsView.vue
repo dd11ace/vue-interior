@@ -1,7 +1,7 @@
 <script setup>
+import BaseNavigation from '@/components/BaseNavigation.vue';
 import BaseContainer from '@/components/BaseContainer.vue';
 import BaseFooter from '@/components/BaseFooter.vue';
-import BaseNavigation from '@/components/BaseNavigation.vue';
 
 let images = [
   {
@@ -52,18 +52,18 @@ let images = [
   <section class="projectsview">
     <BaseContainer>
       <h2>Наши проекты</h2>
-      <div class="projectsview__images-container">
-        <ul class="projectsview__images-list">
-          <li
-            class="projectsview__images-list-item"
-            v-for="image in images"
-            :key="image.id"
-          >
-            <el-image :src="image.img_url" lazy />
-          </li>
-        </ul>
-      </div>
     </BaseContainer>
+    <div class="projectsview__carousel">
+      <BaseContainer>
+        <el-carousel height="650px" interval="5000" trigger="click">
+          <el-carousel-item v-for="image in images" :key="image.id">
+            <div class="projectsview__carousel-item">
+              <el-image :src="image.img_url" />
+            </div>
+          </el-carousel-item>
+        </el-carousel>
+      </BaseContainer>
+    </div>
     <BaseFooter />
   </section>
 </template>
@@ -72,13 +72,17 @@ let images = [
 .projectsview {
   position: relative;
 
-  &__images-list {
-    list-style: none;
+  &__carousel {
+    padding-top: 50px;
+    padding-bottom: 210px;
   }
 
-  &__images-list-item:last-child {
-    margin-bottom: -16px;
-    padding-bottom: 160px;
+  &__carousel-item {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
   }
 }
 </style>
