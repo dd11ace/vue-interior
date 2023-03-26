@@ -49,28 +49,36 @@ let images = [
 
 <template>
   <BaseNavigation />
-  <BaseContainer class="projectview" tag="section">
-    <h2 class="projectsview__title">Наши проекты</h2>
-    <div class="projectsview__images-container">
-      <el-image
-        class="projectsview__images"
-        v-for="image in images"
-        :key="image.id"
-        :src="image.img_url"
-      />
-    </div>
-  </BaseContainer>
-  <BaseFooter />
+  <section class="projectsview">
+    <BaseContainer>
+      <h2 class="projectsview__title">Наши проекты</h2>
+      <div class="projectsview__images-container">
+        <ul class="projectsview__images-list">
+          <li
+            class="projectsview__images-list-item"
+            v-for="image in images"
+            :key="image.id"
+          >
+            <el-image :src="image.img_url" lazy />
+          </li>
+        </ul>
+      </div>
+    </BaseContainer>
+    <BaseFooter />
+  </section>
 </template>
 
 <style lang="scss">
 .projectsview {
   position: relative;
 
-  &__images {
-    width: 40%;
-    min-height: 200px;
-    margin-bottom: 10px;
+  &__images-list {
+    list-style: none;
+  }
+
+  &__images-list-item:last-child {
+    margin-bottom: -16px;
+    padding-bottom: 160px;
   }
 }
 </style>

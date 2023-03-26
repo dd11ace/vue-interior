@@ -27,7 +27,9 @@ const links = [
 
 <template>
   <BaseContainer class="navigation" tag="nav">
-    <RouterLink class="navigation__logo" to="/">LOGO</RouterLink>
+    <RouterLink class="navigation__logo" to="/">
+      <img src="@/assets/img/logo.svg" />
+    </RouterLink>
 
     <ul class="navigation__list">
       <li class="navigation__list-item" v-for="link in links" :key="link.id">
