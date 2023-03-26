@@ -71,6 +71,7 @@ let images = [
 <style lang="scss">
 .projectsview {
   position: relative;
+  min-height: 100vh;
 
   &__carousel {
     padding-top: 50px;
