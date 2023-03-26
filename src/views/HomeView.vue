@@ -43,7 +43,7 @@ import BaseFooterVue from '@/components/BaseFooter.vue';
 
   &__info {
     position: relative;
-    top: 200px;
+    top: 220px;
     left: 120px;
   }
 

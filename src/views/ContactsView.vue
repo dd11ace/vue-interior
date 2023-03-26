@@ -12,7 +12,7 @@ import Map from '@/components/Map.vue';
     <div class="contactsview">
       <div class="contactsview__info">
         <b>Адрес:</b>
-        <p>г. Иркутск, ул. Лапина 44</p>
+        <p>г. Иркутск, ул. Лапина д. 44</p>
         <b>Телефон:</b>
         <p>8 800 000 00 00</p>
       </div>
