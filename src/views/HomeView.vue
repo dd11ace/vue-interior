@@ -6,37 +6,45 @@ import BaseFooterVue from '@/components/BaseFooter.vue';
 
 <template>
   <BaseNavigation />
-  <BaseContainer class="homeview" tag="header">
-    <div class="homeview__bg-img"></div>
-    <section class="homeview__container">
-      <h1 class="homeview__title">
-        Мы делаем интерьер <br />
-        Современным и Мималистичным
-      </h1>
-      <p>Дизайн интерьера</p>
-      <div class="homeview__links">
-        <RouterLink class="homeview__link" to="/contacts">
-          <el-button class="homeview__link-btn" type="primary"
-            >Заказать</el-button
-          >
-        </RouterLink>
-        <RouterLink class="homeview__link" to="/projects">
-          <el-button class="homeview__link-btn" plain>Проекты</el-button>
-        </RouterLink>
+  <header class="homeview">
+    <BaseContainer class="homeview__container">
+      <div class="homeview__bg-img"></div>
+      <div class="homeview__info">
+        <h1 class="homeview__title">
+          Мы делаем интерьер <br />
+          Современным и Минималистичным
+        </h1>
+        <p>Дизайн интерьера</p>
+        <div class="homeview__links">
+          <RouterLink class="homeview__link" to="/contacts">
+            <el-button class="homeview__link-btn" type="primary">
+              Заказать
+            </el-button>
+          </RouterLink>
+          <RouterLink class="homeview__link" to="/projects">
+            <el-button class="homeview__link-btn" plain> Проекты </el-button>
+          </RouterLink>
+        </div>
       </div>
-    </section>
-  </BaseContainer>
-  <BaseFooterVue />
+    </BaseContainer>
+    <BaseFooterVue />
+  </header>
 </template>
 
 <style lang="scss">
 .homeview {
-  display: flex;
   position: relative;
+  min-height: 100vh;
 
   &__container {
-    margin-top: 250px;
-    margin-left: 100px;
+    display: flex;
+    position: relative;
+  }
+
+  &__info {
+    position: relative;
+    top: 200px;
+    left: 120px;
   }
 
   &__title {
@@ -57,12 +65,11 @@ import BaseFooterVue from '@/components/BaseFooter.vue';
   }
 
   &__bg-img {
-    display: block;
-    width: 520px;
-    height: 780px;
     position: absolute;
     top: 20px;
     right: 70px;
+    width: 520px;
+    height: 780px;
     background-image: url(@/assets/img/home-background.jpg);
     background-repeat: no-repeat;
     background-size: 520px 780px;
