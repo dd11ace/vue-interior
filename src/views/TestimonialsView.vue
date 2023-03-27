@@ -6,28 +6,28 @@ import BaseFooter from '@/components/BaseFooter.vue';
 
 let testimonials = [
   {
-    name: 'Пользователь',
-    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores voluptas at numquam non doloremque nulla quaerat vitae accusantium, distinctio enim repellendus praesentium harum rem a. Itaque ut corrupti ducimus tenetur.',
+    name: 'Александр',
+    text: 'Делали ремонт в 2022 году. Дизайнер от студии был с нами везде, во всех магазинах и помогал выбирать, всегда был на объекте. Дизайн получился удобным, практичным и красивым.',
     id: '1',
   },
   {
-    name: 'Пользователь',
-    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores voluptas at numquam non doloremque nulla quaerat vitae accusantium, distinctio enim repellendus praesentium harum rem a. Itaque ut corrupti ducimus tenetur.',
+    name: 'Анатолий',
+    text: 'Никогда бы не подумала, что ремонт может настолько приятным и легким. Купили дом без отделки, знакомые посоветовали эту компанию – здесь высококачественные и грамотные специалисты.',
     id: '2',
   },
   {
-    name: 'Пользователь',
-    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores voluptas at numquam non doloremque nulla quaerat vitae accusantium, distinctio enim repellendus praesentium harum rem a. Itaque ut corrupti ducimus tenetur.',
+    name: 'Игорь',
+    text: 'Купили однушку и стояла непростая задача – сделать комфортную маленькую кухню, зону отдыха и спальню. Результат удивил – все продумано до самых меленьких деталей. Мы голову ломали, как лучше сделать, а дизайнеры сразу предложили несколько вариантов!',
     id: '3',
   },
   {
-    name: 'Пользователь',
-    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores voluptas at numquam non doloremque nulla quaerat vitae accusantium, distinctio enim repellendus praesentium harum rem a. Itaque ut corrupti ducimus tenetur.',
+    name: 'Ира',
+    text: 'Дизайн здесь имеют поразительное качество и выветренность, которую оценят любители комфорта. Также имеется возможность делать перепланировки с учетом госстандартов. Кроме того, предоставляют 2-3 варианта дизайна.',
     id: '4',
   },
   {
-    name: 'Пользователь',
-    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores voluptas at numquam non doloremque nulla quaerat vitae accusantium, distinctio enim repellendus praesentium harum rem a. Itaque ut corrupti ducimus tenetur.',
+    name: 'Ольга',
+    text: 'Огромное спасибо за воплощение красивого интерьера!',
     id: '5',
   },
 ];
@@ -43,7 +43,7 @@ let testimonials = [
         v-for="testimonial in testimonials"
         :key="testimonial.id"
       >
-        <b class="testimonialsview__title">
+        <b>
           {{ testimonial.name }}
         </b>
         <p class="testimonialsview__text">
