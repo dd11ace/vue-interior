@@ -6,23 +6,23 @@ import BaseFooterVue from '@/components/BaseFooter.vue';
 
 <template>
   <BaseNavigation />
-  <header class="homeview">
-    <BaseContainer class="homeview__container">
-      <div class="homeview__bg-img"></div>
-      <div class="homeview__info">
-        <h1 class="homeview__title">
+  <header class="home-view">
+    <BaseContainer class="home-view__container">
+      <div class="home-view__bg-img"></div>
+      <div class="home-view__info">
+        <h1 class="home-view__title">
           Мы делаем интерьер <br />
           Современным и Минималистичным
         </h1>
         <p>Дизайн интерьера</p>
-        <div class="homeview__links">
-          <RouterLink class="homeview__link" to="/contacts">
-            <el-button class="homeview__link-btn" type="primary">
+        <div class="home-view__links">
+          <RouterLink class="home-view__link" to="/contacts">
+            <ElButton class="home-view__link-btn" type="primary">
               Заказать
-            </el-button>
+            </ElButton>
           </RouterLink>
-          <RouterLink class="homeview__link" to="/projects">
-            <el-button class="homeview__link-btn" plain> Проекты </el-button>
+          <RouterLink class="home-view__link" to="/projects">
+            <ElButton class="home-view__link-btn" plain> Проекты </ElButton>
           </RouterLink>
         </div>
       </div>
@@ -32,7 +32,7 @@ import BaseFooterVue from '@/components/BaseFooter.vue';
 </template>
 
 <style lang="scss">
-.homeview {
+.home-view {
   position: relative;
   min-height: 100vh;
 

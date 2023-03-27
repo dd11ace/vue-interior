@@ -37,16 +37,16 @@ const testimonials = [
   <BaseNavigation />
   <BaseContainer tag="section">
     <h1>Отзывы наших клиентов</h1>
-    <div class="testimonialsview">
+    <div class="testimonials-view">
       <BaseCard
-        class="testimonialsview__card"
+        class="testimonials-view__card"
         v-for="testimonial in testimonials"
         :key="testimonial.id"
       >
         <b>
           {{ testimonial.name }}
         </b>
-        <p class="testimonialsview__text">
+        <p class="testimonials-view__text">
           {{ testimonial.text }}
         </p>
       </BaseCard>
@@ -56,7 +56,7 @@ const testimonials = [
 </template>
 
 <style lang="scss">
-.testimonialsview {
+.testimonials-view {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

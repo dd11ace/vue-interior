@@ -37,18 +37,18 @@ const links = [
         v-for="link in links"
         :key="link.id"
       >
-        <el-link>
+        <ElLink>
           <RouterLink class="base-navigation__list-link" :to="link.url">
             {{ link.name }}
           </RouterLink>
-        </el-link>
+        </ElLink>
       </li>
     </ul>
 
     <RouterLink class="base-navigation__list-link" to="/contacts">
-      <el-button class="base-navigation__buy-btn" type="primary">
+      <ElButton class="base-navigation__buy-btn" type="primary">
         Заказать
-      </el-button>
+      </ElButton>
     </RouterLink>
   </BaseContainer>
 </template>

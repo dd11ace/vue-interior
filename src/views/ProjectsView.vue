@@ -49,19 +49,19 @@ const images = [
 
 <template>
   <BaseNavigation />
-  <section class="projectsview">
+  <section class="projects-view">
     <BaseContainer>
       <h1>Наши проекты</h1>
     </BaseContainer>
-    <div class="projectsview__carousel">
+    <div class="projects-view__carousel">
       <BaseContainer>
-        <el-carousel height="650px" interval="5000" trigger="click">
-          <el-carousel-item v-for="image in images" :key="image.id">
-            <div class="projectsview__carousel-item">
-              <el-image :src="image.img_url" />
+        <ElCarousel height="650px" interval="5000" trigger="click">
+          <ElCarouselItem v-for="image in images" :key="image.id">
+            <div class="projects-view__carousel-item">
+              <ElImage :src="image.img_url" />
             </div>
-          </el-carousel-item>
-        </el-carousel>
+          </ElCarouselItem>
+        </ElCarousel>
       </BaseContainer>
     </div>
     <BaseFooter />
@@ -69,7 +69,7 @@ const images = [
 </template>
 
 <style lang="scss">
-.projectsview {
+.projects-view {
   position: relative;
   min-height: 100vh;
 

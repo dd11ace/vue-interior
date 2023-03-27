@@ -9,8 +9,8 @@ import Map from '@/components/Map.vue';
   <BaseNavigation />
   <BaseContainer tag="section">
     <h1>Контакты</h1>
-    <div class="contactsview">
-      <div class="contactsview__info">
+    <div class="contacts-view">
+      <div class="contacts-view__info">
         <b>Адрес:</b>
         <p>г. Иркутск, ул. Лапина д. 44</p>
         <b>Телефон:</b>
@@ -25,7 +25,7 @@ import Map from '@/components/Map.vue';
 </template>
 
 <style lang="scss">
-.contactsview {
+.contacts-view {
   display: flex;
   justify-content: space-around;
   margin-top: 90px;
