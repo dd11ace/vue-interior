@@ -8,7 +8,7 @@ import Map from '@/components/Map.vue';
 <template>
   <BaseNavigation />
   <BaseContainer tag="section">
-    <h2>Контакты</h2>
+    <h1>Контакты</h1>
     <div class="contactsview">
       <div class="contactsview__info">
         <b>Адрес:</b>

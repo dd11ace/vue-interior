@@ -3,8 +3,8 @@ import BaseContainer from './BaseContainer.vue';
 </script>
 
 <template>
-  <footer class="basefooter">
-    <BaseContainer class="basefooter__container">
+  <footer class="base-footer">
+    <BaseContainer class="base-footer__container">
       <div>
         <b>Адрес:</b>
         <p>г. Иркутск, ул. Лапина д. 44</p>
@@ -18,7 +18,7 @@ import BaseContainer from './BaseContainer.vue';
 </template>
 
 <style lang="scss">
-.basefooter {
+.base-footer {
   position: absolute;
   bottom: 0;
   width: 100%;

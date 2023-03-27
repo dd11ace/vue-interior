@@ -3,7 +3,7 @@ import BaseNavigation from '@/components/BaseNavigation.vue';
 import BaseContainer from '@/components/BaseContainer.vue';
 import BaseFooter from '@/components/BaseFooter.vue';
 
-let images = [
+const images = [
   {
     id: '1',
     img_url: 'src/assets/img/projects_imgs/1.jpg',
@@ -51,7 +51,7 @@ let images = [
   <BaseNavigation />
   <section class="projectsview">
     <BaseContainer>
-      <h2>Наши проекты</h2>
+      <h1>Наши проекты</h1>
     </BaseContainer>
     <div class="projectsview__carousel">
       <BaseContainer>

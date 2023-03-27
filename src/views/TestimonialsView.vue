@@ -4,7 +4,7 @@ import BaseCard from '@/components/BaseCard.vue';
 import BaseNavigation from '@/components/BaseNavigation.vue';
 import BaseFooter from '@/components/BaseFooter.vue';
 
-let testimonials = [
+const testimonials = [
   {
     name: 'Александр',
     text: 'Делали ремонт в 2022 году. Дизайнер от студии был с нами везде, во всех магазинах и помогал выбирать, всегда был на объекте. Дизайн получился удобным, практичным и красивым.',
@@ -36,7 +36,7 @@ let testimonials = [
 <template>
   <BaseNavigation />
   <BaseContainer tag="section">
-    <h2>Отзывы наших клиентов</h2>
+    <h1>Отзывы наших клиентов</h1>
     <div class="testimonialsview">
       <BaseCard
         class="testimonialsview__card"
